@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".verificacion">
+
+    <TextView
+        android:id="@+id/tituloverificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verificacion De Datos"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/vnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloverificacion"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/vapellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vnombre"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/vsexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vapellido"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/vinteres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vsexo"
+        android:textSize="20dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/vinteres">
+        <Button
+            android:id="@+id/btaceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACEPTAR"
+            android:textSize="20dp"
+            android:onClick="ClickAceptar"/>
+        <Button
+            android:id="@+id/btrechazar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECHAZAR"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:onClick="ClickCancelar"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

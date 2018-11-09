@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".alta">
+
+    <TextView
+        android:id="@+id/tituloalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATOS A DAR DE ALTA"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloalta">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre: "
+            android:textSize="16dp"/>
+        <EditText
+            android:id="@+id/editnombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellidos: "
+            android:textSize="16dp"/>
+        <EditText
+            android:id="@+id/editapellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/etisexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@id/linear1"
+        android:text="Sexo:"/>
+    <RadioGroup
+        android:id="@+id/grupobotones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/etisexo"
+        android:layout_below="@id/linear1"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+        <RadioButton android:id="@+id/femenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/etimuseos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Museos en los que estas interesado"
+        android:textSize="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@id/etisexo"/>
+    <CheckBox
+        android:id="@+id/checkarte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="ARTE"
+        android:layout_below="@id/etimuseos"/>
+    <CheckBox
+        android:id="@+id/checkciencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="CIENCIA"
+        android:layout_below="@id/checkarte"/>
+    <CheckBox
+        android:id="@+id/checkotros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="OTROS"
+        android:layout_below="@id/checkciencia"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/checkotros">
+        <Button
+            android:id="@+id/btcancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCELAR"
+            android:onClick="ClickCancelar"
+            android:textSize="20dp"/>
+        <Button
+            android:id="@+id/btalta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALTA"
+            android:textSize="20dp"
+            android:onClick="ClickAlta"
+            android:layout_marginLeft="40dp"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
